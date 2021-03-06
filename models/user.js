@@ -1,14 +1,6 @@
-const {
-  Model,
-  DataTypes
-} = require('sequelize');
-const sequelize = require('../config/connection');
-
-//  import bcrypt into the User.js file
-
+const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
-
-// npm install bcrypt
+const sequelize = require('../config/connection');
 
 // create our User model
 class User extends Model {
@@ -19,7 +11,8 @@ class User extends Model {
 }
 
 // create fields/columns for User model
-User.init({
+User.init(
+  {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -46,7 +39,6 @@ User.init({
       }
     }
   },
-  // 12.2.5
   {
     hooks: {
       // set up beforeCreate lifecycle "hook" functionality
