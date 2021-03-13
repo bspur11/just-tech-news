@@ -11,13 +11,6 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-// to console the session variables.
-router.get('/', (req, res) => {
-  console.log(req.session);
-
-  // other logic...
-});
-
 // get all posts for homepage
 router.get('/', (req, res) => {
   console.log('======================');
